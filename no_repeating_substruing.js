@@ -12,3 +12,4 @@ function noReapeatSubstring(str){
     }
     return maxLength
 }
+console.log(noReapeatSubstring("aaccb"))
