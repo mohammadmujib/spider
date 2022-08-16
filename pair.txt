@@ -1,0 +1,44 @@
+submission no.: #5755890
+submitted on: August 13, 2022 12:09
+SUBMISSION STATUS: wrong answer
+programming language: JavaScript [SpiderMonkey] (SMonkey 78.3)
+memory: 0kB
+execution time: 0s
+Test cases
+
+test 0 - RE (score=0.000000, sig=-1, time=0.019804, mem=18664)
+test 1 - RE (score=0.000000, sig=-1, time=0.019646, mem=18808)
+test 2 - RE (score=0.000000, sig=-1, time=0.022266, mem=19472)
+test 3 - RE (score=0.000000, sig=-1, time=0.178154, mem=127288)
+test 4 - TLE (score=0.000000, sig=0, time=1.010000, mem=771352)
+test 5 - TLE (score=0.000000, sig=0, time=1.010000, mem=749796)
+test 6 - TLE (score=0.000000, sig=0, time=1.010000, mem=718332)
+test 7 - TLE (score=0.000000, sig=0, time=1.010000, mem=815332)
+test 8 - TLE (score=0.000000, sig=0, time=1.010000, mem=809660)
+Source code
+
+function pair(n, arr) {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if ((arr[i] + arr[j]) % 2 === 0) {
+        res.push([i, j]);
+      }
+    }
+  }
+  if (res.length === n) {
+    return "YES";
+  } else {
+    return "NO";
+  }
+}
+
+
+let t = readline();
+
+for (let i = 0; i < t; i++) {
+  let n = readline();
+  let arr = readline().split(" ").map(Number);
+  console.log(pair(n, arr));
+}
+ 
