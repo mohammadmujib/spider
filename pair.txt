@@ -42,3 +42,4 @@ for (let i = 0; i < t; i++) {
   console.log(pair(n, arr));
 }
  
+ https://codeshare.io/78bLME
